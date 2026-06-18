@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section class="section-1">
+        <main>
+            <div class="navbar">
+                <div class="logo">
+                    <h1>Task Manager</h1>
+                </div>
+                <div class="theme-toggle-icon">
+                    <i class="ri-sun-line"></i>
+                </div>
+            </div>
+            <div class="create-task-container">
+                <div class="create-task-title">
+                    <span><i class="ri-add-circle-fill"></i></span>
+                    <h2>CREATE NEW TASK</h2>
+                </div>
+                <div class="create-task-form">
+                    <form class="task-form">
+                        <div class="task-title-container">
+                            <label for="task-title">TASK TITLE</label>
+                            <input type="text" id="task-title" placeholder="e.g. Homework, Project , Code etc.">
+                        </div>
+                        <div class="categories-container"> <label for="categories">CATEGORY</label>
+                            <select id="categories">
+                                <option value="Personal">Personal</option>
+                                <option value="Work">Work</option>
+                                <option value="Education">Education</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="create-task-btn"><span><i
+                                    class="ri-send-ins-line"></i></span>&nbsp; ADD
+                            TASK</button>
+                    </form>
+                </div>
+
+            </div>
+            <div class="task-stats-container">
+                <h3>TASK STATISTICS</h3>
+                <div class="stats-container">
+                    <div class="total-tasks">
+                        <span><i class="ri-stack-line"></i></span>
+                        <h3>12</h3>
+                        <h4>Total Tasks</h4>
+                    </div>
+                    <div class="completed-tasks">
+                        <span><i class="ri-checkbox-circle-line"></i></span>
+                        <h3>5</h3>
+                        <h4>Completed</h4>
+                    </div>
+                    <div class="pending">
+                        <span><i class="ri-timer-line"></i></span>
+                        <h3>7</h3>
+                        <h4>Pending</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="search-container">
+                <div class="search-input">
+                    <i class="ri-search-line"></i>
+                    <input type="text" placeholder="Search tasks...">
+                </div>
+                <select id="categories">
+                    <option value="All">All Categories</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="Education">Education</option>
+                    <option value="Other">Other</option>
+                </select>
+                <div class="clear-tasks" role="button" tabindex="0">
+                    <i class="ri-delete-bin-line"></i>
+                    <h4>Clear All</h4>
+                </div>
+            </div>
+            <div class="tasks-container task-container-black">
+                <div class="task">
+                    <div class="task-info">
+                        <div class="left-part"><i class="ri-circle-line"></i></div>
+                        <div class="right-part">
+                            <div class="task-category-state">
+                                <h4 class="task-category">Personal</h4>
+                                <h4 class="task-state">Pending</h4>
+                            </div>
+                            <h2 class="task-name">Complete Homework</h2>
+                        </div>
+
+                    </div>
+                    <div class="manage-task-icons">
+                        <span><i title="Edit Task" class="ri-edit-line"></i></span>
+                        <span><i title="Mark as Complete" class="ri-checkbox-circle-line"></i></span>
+                        <span><i title="Delete Task" class="ri-delete-bin-line"></i></span>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-info">
+                        <div class="left-part"><i class="ri-circle-line"></i></div>
+                        <div class="right-part">
+                            <div class="task-category-state">
+                                <h4 class="task-category">Personal</h4>
+                                <h4 class="task-state">Pending</h4>
+                            </div>
+                            <h2 class="task-name">Complete Homework</h2>
+                        </div>
+
+                    </div>
+                    <div class="manage-task-icons">
+                        <span><i title="Edit Task" class="ri-edit-line"></i></span>
+                        <span><i title="Mark as Complete" class="ri-checkbox-circle-line"></i></span>
+                        <span><i title="Delete Task" class="ri-delete-bin-line"></i></span>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="task-info">
+                        <div class="left-part"><i class="ri-circle-line"></i></div>
+                        <div class="right-part">
+                            <div class="task-category-state">
+                                <h4 class="task-category">Personal</h4>
+                                <h4 class="task-state">Pending</h4>
+                            </div>
+                            <h2 class="task-name">Complete Homework</h2>
+                        </div>
+
+                    </div>
+                    <div class="manage-task-icons">
+                        <span><i title="Edit Task" class="ri-edit-line"></i></span>
+                        <span><i title="Mark as Complete" class="ri-checkbox-circle-line"></i></span>
+                        <span><i title="Delete Task" class="ri-delete-bin-line"></i></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
