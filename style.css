@@ -488,3 +488,55 @@ main {
 .black-circle {
     color: black !important;
 }
+
+
+/* Main Containers */
+.dark-theme .navbar,
+.dark-theme .create-task-container,
+.dark-theme .task-stats-container,
+.dark-theme .search-container {
+    background: black;
+}
+
+/* Navbar */
+.dark-theme .navbar .logo h1 {
+    color: white;
+}
+
+/* Theme Button */
+.dark-theme .theme-toggle-icon {
+    background: orangered;
+    border-bottom: 3px solid white;
+}
+
+.dark-theme .theme-toggle-icon i {
+    color: white;
+}
+
+/* Create Task Title */
+.dark-theme .create-task-title h2,
+.dark-theme .create-task-title i {
+    color: white;
+}
+
+/* Statistics Title */
+.dark-theme .task-stats-container>h3 {
+    color: white;
+}
+
+/* Create Task Button */
+.dark-theme .create-task-btn {
+    background: orangered;
+    border-bottom: 4px solid white;
+    color: white;
+}
+/* Create Task Button Hover */
+.dark-theme .create-task-btn:hover {
+    background: black;
+    border-bottom: 4px solid orangered;
+}
+/* Form Labels */
+.dark-theme .task-title-container label,
+.dark-theme .categories-container label {
+    color: white;
+}

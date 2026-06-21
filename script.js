@@ -8,8 +8,13 @@ const tasksContainer = document.querySelector(".tasks-container"); // all tasks 
 const totalTasksCount = document.querySelector("#total-tasks-count"); // total tasks count
 const completedTasksCount = document.querySelector("#completed-tasks-count"); // completed tasks count
 const pendingTasksCount = document.querySelector("#pending-tasks-count"); // pending tasks count
+const searchInput = document.querySelector("#search-input"); // search input field
 
+const categoryFilter = document.querySelector("#categories"); // category filter select field
 
+const clearTasksBtn = document.querySelector(".clear-tasks"); // clear all tasks button
+
+const themeToggleBtn = document.querySelector(".theme-toggle-icon"); // theme toggle button
 
 
 // global tasks array - mini database for CRUD 
@@ -55,12 +60,12 @@ loadTasks(); // load tasks from local storage
 renderTasks(); // render tasks to the DOM
 
 // render tasks from tasks array to the DOM
-function renderTasks() {
+function renderTasks( filteredTasks = tasks ) {
     // console.log(tasks); 
     // container empty
     tasksContainer.innerHTML = "";
     // converting each task into ui
-    tasks.forEach((task) => {
+    filteredTasks.forEach((task) => {
         tasksContainer.innerHTML += `   
         <div class="task" data-id="${task.id}">
                     <div class="task-info">
@@ -149,4 +154,71 @@ function handleTaskActions() {
 }
 handleTaskActions();
 
+// function to handle search functionality
+function handleSearch() {
+    searchInput.addEventListener("input", (event) => {
+        // console.log(event.target.value);
+        const searchValue = event.target.value.toLowerCase();
+        // console.log(searchValue);
+        const filteredTasks = tasks.filter(task => task.title.toLowerCase().includes(searchValue));
+        // console.log(filteredTasks);
 
+        renderTasks(filteredTasks);
+    });
+}
+
+handleSearch();
+
+
+
+// function to handle category filter functionality
+function handleCategoryFilter() {
+    categoryFilter.addEventListener("change", (event) => {
+        const selectedCategory = event.target.value;
+        // show all tasks
+        if (selectedCategory === "All") {
+            renderTasks();
+            return;
+        }
+        // filter tasks by category
+        const filteredTasks = tasks.filter(
+            task => task.category === selectedCategory
+        );
+        renderTasks(filteredTasks);
+    });
+}
+
+handleCategoryFilter();
+
+// function to handle clear all tasks functionality
+function handleClearAllTasks() {
+    clearTasksBtn.addEventListener("click", () => {
+        tasks = [];
+        saveTasks();
+        renderTasks();
+    });
+}
+handleClearAllTasks();
+
+// function to handle theme toggle functionality
+function handleThemeToggle() {
+    themeToggleBtn.addEventListener("click", () => {
+
+        // toggle dark theme class
+        document.body.classList.toggle("dark-theme");
+
+        // change icon
+        const themeIcon = themeToggleBtn.querySelector("i");
+
+        if (document.body.classList.contains("dark-theme")) {
+            themeIcon.classList.remove("ri-sun-line");
+            themeIcon.classList.add("ri-moon-line");
+        } else {
+            themeIcon.classList.remove("ri-moon-line");
+            themeIcon.classList.add("ri-sun-line");
+        }
+
+    });
+}
+
+handleThemeToggle();
