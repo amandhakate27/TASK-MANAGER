@@ -29,10 +29,11 @@
                     <form class="task-form">
                         <div class="task-title-container">
                             <label for="task-title">TASK TITLE</label>
-                            <input type="text" id="task-title" placeholder="e.g. Homework, Project , Code etc.">
+                            <input type="text" required  id="task-title" placeholder="e.g. Homework, Project , Code etc.">
                         </div>
-                        <div class="categories-container"> <label for="categories">CATEGORY</label>
-                            <select id="categories">
+                        <div class="categories-container">
+                            <label for="form-categories">CATEGORY</label>
+                            <select id="form-categories" required>
                                 <option value="Personal">Personal</option>
                                 <option value="Work">Work</option>
                                 <option value="Education">Education</option>
@@ -52,17 +53,17 @@
                 <div class="stats-container">
                     <div class="total-tasks">
                         <span><i class="ri-stack-line"></i></span>
-                        <h3>12</h3>
+                        <h3 id="total-tasks-count">0</h3>
                         <h4>Total Tasks</h4>
                     </div>
                     <div class="completed-tasks">
                         <span><i class="ri-checkbox-circle-line"></i></span>
-                        <h3>5</h3>
+                        <h3 id="completed-tasks-count">0</h3>
                         <h4>Completed</h4>
                     </div>
                     <div class="pending">
                         <span><i class="ri-timer-line"></i></span>
-                        <h3>7</h3>
+                        <h3 id="pending-tasks-count">0</h3>
                         <h4>Pending</h4>
                     </div>
                 </div>
@@ -85,7 +86,7 @@
                 </div>
             </div>
             <div class="tasks-container task-container-black">
-                <div class="task">
+                <!-- <div class="task">
                     <div class="task-info">
                         <div class="left-part"><i class="ri-circle-line"></i></div>
                         <div class="right-part">
@@ -102,43 +103,7 @@
                         <span><i title="Mark as Complete" class="ri-checkbox-circle-line"></i></span>
                         <span><i title="Delete Task" class="ri-delete-bin-line"></i></span>
                     </div>
-                </div>
-                <div class="task">
-                    <div class="task-info">
-                        <div class="left-part"><i class="ri-circle-line"></i></div>
-                        <div class="right-part">
-                            <div class="task-category-state">
-                                <h4 class="task-category">Personal</h4>
-                                <h4 class="task-state">Pending</h4>
-                            </div>
-                            <h2 class="task-name">Complete Homework</h2>
-                        </div>
-
-                    </div>
-                    <div class="manage-task-icons">
-                        <span><i title="Edit Task" class="ri-edit-line"></i></span>
-                        <span><i title="Mark as Complete" class="ri-checkbox-circle-line"></i></span>
-                        <span><i title="Delete Task" class="ri-delete-bin-line"></i></span>
-                    </div>
-                </div>
-                <div class="task">
-                    <div class="task-info">
-                        <div class="left-part"><i class="ri-circle-line"></i></div>
-                        <div class="right-part">
-                            <div class="task-category-state">
-                                <h4 class="task-category">Personal</h4>
-                                <h4 class="task-state">Pending</h4>
-                            </div>
-                            <h2 class="task-name">Complete Homework</h2>
-                        </div>
-
-                    </div>
-                    <div class="manage-task-icons">
-                        <span><i title="Edit Task" class="ri-edit-line"></i></span>
-                        <span><i title="Mark as Complete" class="ri-checkbox-circle-line"></i></span>
-                        <span><i title="Delete Task" class="ri-delete-bin-line"></i></span>
-                    </div>
-                </div>
+                </div> -->
             </div>
         </main>
     </section>
