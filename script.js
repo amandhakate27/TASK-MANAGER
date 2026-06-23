@@ -217,8 +217,9 @@ function handleThemeToggle() {
             themeIcon.classList.remove("ri-moon-line");
             themeIcon.classList.add("ri-sun-line");
         }
-
     });
 }
-
 handleThemeToggle();
+
+
+
