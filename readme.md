@@ -2,6 +2,10 @@
 
 This README explains how the browser works behind the scenes and how JavaScript events move through elements.
 
+Live Demo: [task-manager-ashy-chi.vercel.app](https://task-manager-ashy-chi.vercel.app/)
+
+This project is part of the Sheryians Coding School assignment.
+
 ## Parsing
 
 ### Definition
@@ -187,5 +191,3 @@ document.getElementById('todo-list').addEventListener('click', (event) => {
 });
 </script>
 ```
-
-This is useful because even if you add new list items later, the same parent listener still works.
